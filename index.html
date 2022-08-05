@@ -10,7 +10,7 @@
         <ul id="private_ip"></ul>
         <h4>Your public IP addresses:</h4>
         <ul id="public_ip"></ul>
-        <script type="text/javascript" src="ipscan.js"></script>
+        
 
         <div>
             <h4>Live IP addresses:</h4>
@@ -19,7 +19,23 @@
             <ul id="dead_private_ip"></ul>
             <button onclick="end_scan()" >end scan</button>
         </div>
-<script src="//cdn.jsdelivr.net/npm/eruda"></script>
-<script>eruda.init();</script>
+
+
+<script>
+
+let el = document.createElement('div');
+document.body.appendChild(el);
+
+eruda.init({
+    container: el,
+    tool: ['console', 'elements']
+});
+
+</script>
+
+
+
+<script>
+<script type="text/javascript" src="ipscan.js"></script>
     </body>
 </html>
